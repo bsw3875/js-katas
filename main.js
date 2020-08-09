@@ -1,5 +1,6 @@
 const mainElement = document.querySelector('main')
 
+//Display the numbers from 1 to 20. (1, 2, 3, …, 19, 20)
 const kata1heading = document.createElement('h1')
 mainElement.append(kata1heading)
 kata1heading.append('kata1')
@@ -12,6 +13,7 @@ while (counter1 <= limit) {
     counter1 += 1
 }
 
+//Display the even numbers from 1 to 20. (2, 4, 6, …, 18, 20)
 const kata2heading = document.createElement('h1')
 mainElement.append(kata2heading)
 kata2heading.append('kata2')
@@ -25,7 +27,7 @@ while (counter2 <= limit) {
 
 }
 
-
+//Display the odd numbers from 1 to 20. (1, 3, 5, …, 17, 19)
 const kata3heading = document.createElement('h1')
 mainElement.append(kata3heading)
 kata3heading.append('kata3')
@@ -38,7 +40,7 @@ while (counter3 <= limit) {
     counter3 += 2
 }
 
-
+//Display the multiples of 5 up to 100. (5, 10, 15, …, 95, 100)
 const kata4heading = document.createElement('h1')
 mainElement.append(kata4heading)
 kata4heading.append('kata4')
@@ -52,27 +54,22 @@ while (counter4 <= 100) {
 
 }
 
-
+//Display the square numbers from 1 up to 100. (1, 4, 9, …, 81, 100)
+//*
 const kata5heading = document.createElement('h1')
 mainElement.append(kata5heading)
 kata5heading.append('kata5')
-let counter5 = 5
+let counter5 = 0
 const kata5Result = document.createElement('h2')
-let squareNumbers = function (num) {
-    let index,
-        sum = 5;
+for (counter5 = 1; counter5 < 10; counter5++) {
+    kata5Result.append(`${counter5 * counter5} `)
+    //kata5Result.append(counter5 * counter5 + " ");
+    mainElement.append(kata5Result)
 
-    for (index = 0; index <= num; index ** 100) {
-        sum += i * i;
-    }
-    return sum;
 }
-kata5Result.append(counter5 + " ")
-mainElement.append(kata5Result)
 
 
-
-
+//Display the numbers counting backwards from 20 to 1. (20, 19, 18, …, 2, 1)
 const kata6heading = document.createElement('h1')
 mainElement.append(kata6heading)
 kata6heading.append('kata6')
@@ -82,9 +79,9 @@ for (counter6 = 20; counter6 >= 1; counter6 -= 1) {
     kata6Result.append(counter6 + " ")
     mainElement.append(kata6Result)
 
-
 }
 
+// //Display the even numbers counting backwards from 20 to 1. (20, 18, 16, …, 4, 2)
 
 const kata7heading = document.createElement('h1')
 mainElement.append(kata7heading)
@@ -95,20 +92,21 @@ for (counter7 = 20; counter7 >= 1; counter7 -= 2) {
     kata7Result.append(counter7 + " ")
     mainElement.append(kata7Result)
 
-
 }
 
+//Display the odd numbers from 20 to 1, counting backwards. (19, 17, 15, …, 3, 1)
+//*
 const kata8heading = document.createElement('h1')
 mainElement.append(kata8heading)
 kata8heading.append('kata8')
 let counter8 = 20
 const kata8Result = document.createElement('h2')
-for (counter8 = 20; counter8 >= 1; counter8 -= 1) {
+for (counter8 = 20; counter8 >= 1; counter8 -= 3) {
     kata8Result.append(counter8 + " ")
     mainElement.append(kata8Result)
 
-
 }
+// //Display the multiples of 5, counting down from 100 to 1. (100, 95, 90, …, 10, 5)
 
 const kata9heading = document.createElement('h1')
 mainElement.append(kata9heading)
@@ -122,43 +120,42 @@ for (counter9 = 100; counter9 >= 1; counter9 -= 5) {
 
 }
 
-
+// //Display the square numbers, counting down from 100. (100, 81, 64, …, 4, 1)
+//*
 const kata10heading = document.createElement('h1')
 mainElement.append(kata10heading)
 kata10heading.append('kata10')
-let counter10 = 100
+let counter10 = 4
 const kata10Result = document.createElement('h2')
-let sqNumbers = function (numberSum) {
-    let index, sum = 0;
+for (counter10 = 10; counter10 >= 1; counter10 -= 1) {
+    kata10Result.append(`${counter10 * counter10} `)
+    mainElement.append(kata10Result)
 
-    for (index = 0; index >= numberSum; index ** 100) {
-        sum += i * i;
-    }
-    return numberSum;
 }
-kata10Result.append(counter10 + " ")
-
-//for (counter10 = 100; counter10 >= 1; counter10 -= 1) {
-//mainElement.append(kata10Result)
 
 
 
+
+//*
 const sampleArray = [
     469, 755, 244, 245, 758, 450, 302, 20, 712, 71,
     456, 21, 398, 339, 882, 848, 179, 535, 940, 472,
 ];
+
+//Display the 20 elements of sampleArray. (469, 755, 244, …, 940, 472)
 
 const kata11heading = document.createElement('h1')
 mainElement.append(kata11heading)
 kata11heading.append('kata11')
 const kata11Result = document.createElement('h2')
 for (let index = 1; index < sampleArray.length; index++) {
-    if (sampleArray[index] += 20) {
+    if (sampleArray[index] -= 1) {
         kata11Result.append(sampleArray[index] + (" "))
         mainElement.append(kata11Result)
     }
 }
 
+//Display all the even numbers contained in sampleArray. (244, 758, 450, …, 940, 472)
 
 const kata12heading = document.createElement('h1')
 mainElement.append(kata12heading)
@@ -172,117 +169,101 @@ for (let index = 0; index < sampleArray.length; index++) {
 }
 
 
+//Display all the odd numbers contained in sampleArray. (469, 755, 245, …, 179, 535)
 
 const kata13heading = document.createElement('h1')
 mainElement.append(kata13heading)
 kata13heading.append('kata13')
 const kata13Result = document.createElement('h2')
-for (let index = 0; index < sampleArray.length; index++) {
-    if (sampleArray[index] !== 1) {
+for (let index = 3; index < sampleArray.length; index++) {
+    if (sampleArray[index] != 1) {
         kata13Result.append(sampleArray[index] + (" "))
         mainElement.append(kata13Result)
     }
 }
 
-
-
-
-
+//Display the square of each element in sampleArray. (219961, 570025, …, 222784)
+//*
 const kata14heading = document.createElement('h1')
 mainElement.append(kata14heading)
 kata14heading.append('kata14')
 const kata14Result = document.createElement('h2')
+const square_it = (element) => element ** 2
 for (let index = 0; index < sampleArray.length; index++) {
-//const square_it = (element) => element ** 2
-function squareIt(number) {
-    return Math.pow(number, x, 2);
+    if (sampleArray[index] * 1) {
+        kata14Result.append(sampleArray[index] * (" "))
+        mainElement.append(kata14Result)
+    }
 }
-}
 
-
-//kata14Result.append(sampleArray[index] + (" "))
-//mainElement.append(kata14Result)
-
-
-
-
-
-
+//Display the sum of all the numbers from 1 to 20.
+//*
 const kata15heading = document.createElement('h1')
 mainElement.append(kata15heading)
 kata15heading.append('kata15')
 const kata15Result = document.createElement('h2')
-function sumAll(array) {
-    let min = Math.min(array[0], array[1]);
-    let max = Math.max(arayr[0], array[1]);
+let sampleArr = [1, 2, 3];
 
-    for (let index = min; index <= max; index++) {
-        
-    }
-    
+for (let index = 0, sum = 0; index < sampleArr.length; sum += sampleArr[index++]) {
+    kata15Result.append(sampleArray[index] + (" "))
+    mainElement.append(kata15Result)
+     
 }
-sumAll[index];
+// }
+//sumAll[array];
 
-
-kata15Result.append(sampleArray[index] + (" "))
-mainElement.append(kata15Result)
-
-
+//Display the sum of all the elements in sampleArray.
+//*
 const kata16heading = document.createElement('h1')
 mainElement.append(kata16heading)
 kata16heading.append('kata16')
 const kata16Result = document.createElement('h2')
-//let array = [];
-//let total = 0;
-//for (let index in sampleArray) { total += array[index]; }
-let array = [1, 2, 3, 4, 5];
-let sum = array. reduce(function(a, b){
-return a + b;
-}, 0);
+let array = [];
+let total = 0;
+for (let index in sampleArray) {
+    total += array[index];
+    // let array = [1, 2, 3, 4, 5];
+    // let sum = array.reduce(function (a, b) {
 
-kata16Result.append(sampleArray[index] + (" "))
-mainElement.append(kata16Result)
+    kata16Result.append(sampleArray[index] + (" "))
+    mainElement.append(kata16Result)
+}
 
 
+//Display the smallest element in sampleArray.
+//*
 const kata17heading = document.createElement('h1')
 mainElement.append(kata17heading)
 kata17heading.append('kata17')
-const kata417Result = document.createElement('h2')
-function arrayMin(array){
-     let min = array[0]; 
-     for(let index = 0; index < array. length; index++){
-          if(min < array[index]){ min = min;
-         }
-         else if (min > array[index]){ min = array[index + 1];
-         }
-         else if (min == array[index]){ min = min;
-         } 
-        
-        } return min; 
+const kata17Result = document.createElement('h2')
+let arr = [19, 711, 70];
+let smallest = arr[0];
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index] < smallest) {
+        smallest = arr[index];
+        kata17Result.append(sampleArray[index] + (" "))
+        mainElement.append(kata17Result)
     }
-//function getMinOfArray(numArray) {
-    //return Math.min.apply(null, numArray);
-//}
+}
 
-//kata17Result.append(sampleArray[index] + (" "))
-//mainElement.append(kata17Result)
+//citation:https://stackoverflow.com
 
 
+//Display the largest element in sampleArray.
+//*
 const kata18heading = document.createElement('h1')
 mainElement.append(kata18heading)
 kata18heading.append('kata18')
 const kata18Result = document.createElement('h2')
-//const largest = [842, 882, 940]
-//Math.max([value1, value2, value3])
-//mainElement.append(kata18Result)
-function getMaxOfArray(numArray) {
-    return Math.max.apply(null, numArray);
+let arry = [534, 939, 471];
+let largest = arry[0];
+for (let index = 0; index < arry.length; index++) {
+    if (arry[index] > largest) {
+        largest = arry[index];
+        kata18Result.append(sampleArray[index] + (" "))
+        mainElement.append(kata18Result)
+
+        //citation:https://stackoverflow.com
+    }
 }
-
-
-
-//kata18Result.append(sampleArray[index] + (" "))
-   // mainElement.append(kata18Result)
-//}
-//}
-//citation: Mavis Acheampong, Michael Vitolio
+ //citation: Mavis Acheampong, Michael Vitolio
